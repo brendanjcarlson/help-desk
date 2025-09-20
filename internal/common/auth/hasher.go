@@ -107,7 +107,7 @@ func (a *Argon2) ComparePasswordAndHash(password []byte, hash string) error {
 
 type Argon2Option func(*Argon2) error
 
-// TODO: validate min memory
+// TODO: validate memory
 func WithArgon2Memory(memory uint32) Argon2Option {
 	return func(a *Argon2) error {
 		a.memory = memory
@@ -115,7 +115,7 @@ func WithArgon2Memory(memory uint32) Argon2Option {
 	}
 }
 
-// TODO: validate min iterations
+// TODO: validate iterations
 func WithArgon2Iterations(iterations uint32) Argon2Option {
 	return func(a *Argon2) error {
 		a.iterations = iterations
